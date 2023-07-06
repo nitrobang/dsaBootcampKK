@@ -1,0 +1,12 @@
+int n = sc.nextInt();
+ArrayList<ArrayList<Integer>> adj_list=new ArrayList<>();
+
+for(int i=0;i<=n;i++){
+    adj_list.add(new ArrayList<>());
+}
+for(int i=0;i<n-1;i++){
+    int parent=sc.nextInt();
+    int child=sc.nextInt();
+    adj_list.get(parent).add(child);
+    adj_list.get(child).add(parent);
+}
